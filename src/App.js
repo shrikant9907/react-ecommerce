@@ -1,16 +1,20 @@
 import React from 'react'; 
+import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import BsNavbar from './components/navbar/Navbar';
 import Header from './layouts/Header/Header';
 import { TopMenusRoutes } from './_config/TopMenus';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Footer from './layouts/Footer/Footer';
 
 const App = () => {
   return (
-    <Router>
+    <>
+      <Router>
 
-      {/* <BsNavbar brandname="React E-Commerce Logo" logotype="text" logosrc="" /> */}
       <Header />
-      
+      <Footer />
+
       <Routes>
         {/* Top Menu Routes Configuration is in _config/TopMenus.js */}
 
@@ -19,10 +23,12 @@ const App = () => {
             return <Route {...route} key={ridx} /> 
           }) 
         }
-     
+
       </Routes>
 
-    </Router>
+      </Router>
+      <ToastContainer />
+    </>
   );
 }
 

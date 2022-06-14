@@ -1,8 +1,5 @@
+import Checkbox from "../components/common/Form/CheckBox/CheckBox";
 import Home from "../layouts/home";
-import ThemeAboutPage from "../layouts/theme/ThemeAboutPage";
-import ThemeComponentsPage from "../layouts/theme/ThemeComponentsPage";
-import ThemeExamplesPage from "../layouts/theme/ThemeExamplesPage";
-import ThemeLayoutsPage from "../layouts/theme/ThemeLayoutsPages";
 
 // Top Menu Paths
 export const TopMenusRoutes = [
@@ -12,39 +9,19 @@ export const TopMenusRoutes = [
     element: <Home />
   },
   {
-    path: "/about",
+    path: "/cart",
     exact: true,
-    element: <ThemeAboutPage />
+    element: <Checkbox />
   },
   {
-    path: "/components",
+    path: "/checkout",
     exact: true,
-    element: <ThemeComponentsPage />
+    element: <Checkbox />
   },
   {
-    path: "/components/:componentName",
+    path: "/payment",
     exact: true,
-    element: <ThemeComponentsPage />
-  },
-  {
-    path: "/layouts",
-    exact: true,
-    element: <ThemeLayoutsPage />
-  },
-  {
-    path: "/layouts/:layoutName",
-    exact: true,
-    element: <ThemeLayoutsPage />
-  },
-  {
-    path: "/examples",
-    exact: true,
-    element: <ThemeExamplesPage />
-  },
-  {
-    path: "/examples:exampleName",
-    exact: true,
-    element: <ThemeExamplesPage />
+    element: <Checkbox />
   },
 ]
 
@@ -56,23 +33,18 @@ export const TopMenusLinks = [
     show: true
   },
   {
-    name: 'About',
-    to: '/about',
+    name: 'Checkout',
+    to: '/checkout',
     show: true
   },
   {
-    name: 'Components',
-    to: '/components',
+    name: 'Cart',
+    to: '/cart',
     show: true
   },
   {
-    name: 'Layouts',
-    to: '/layouts',
+    name: 'Payment',
+    to: '/payment',
     show: true
   },
-  {
-    name: 'Examples',
-    to: '/examples',
-    show: true
-  }
 ]

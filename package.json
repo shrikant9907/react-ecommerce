@@ -19,6 +19,7 @@
     "react-datepicker": "^4.7.0",
     "react-datetime": "^3.1.1",
     "react-dom": "^16.8.6",
+    "react-flags-select": "^2.2.3",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.1",
     "react-scripts": "^4.0.3",

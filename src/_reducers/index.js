@@ -1,11 +1,8 @@
 import { combineReducers } from 'redux';
-
-import blogReducer from './blogReducer';
-import CounterReducer from './counterReducer';
+import authModalReducer from './authModalReducer';
 
 const reducer = combineReducers({
-    blog: blogReducer,
-    counter: CounterReducer
+    authModal: authModalReducer
 }); 
 
 export default reducer;

@@ -14,6 +14,10 @@ export const REGISTER_FAIL = "REGISTER_FAIL";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAIL = "LOGIN_FAIL";
 export const LOGOUT = "LOGOUT";
+export const SHOW_SIGNIN_MODAL = "SHOW_SIGNIN_MODAL";
+export const SHOW_SIGNUP_MODAL = "SHOW_SIGNUP_MODAL";
+export const HIDE_SIGNIN_MODAL = "HIDE_SIGNIN_MODAL";
+export const HIDE_SIGNUP_MODAL = "HIDE_SIGNUP_MODAL";
 
 // Message
 export const SET_MESSAGE = "SET_MESSAGE";
