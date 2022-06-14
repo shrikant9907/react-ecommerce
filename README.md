@@ -1,21 +1,13 @@
-# React Starter Template 
-React Starter Template for Front End Web Application.
-
-## Features
-- Managing Environment Files for Local and Production 
-- Using SCSS for styling
-- Reusable Components
-- Using Redux, Redux Thunk for Centerized Storage. 
-- In Build Website Pages like Home, About, Contact, Blog, Blog Listing, Shop, Cart, Checkout.
-- AXIOS for Thrid Party API's
-
+# React E-Commerce Template 
+React E-Commerce Template for Front End Web Application.
+ 
 ## How to start the project?
 
 ### Take a clone
-https://github.com/shrikant9907/react-starter.git
+https://github.com/shrikant9907/react-ecommerce.git
 
 ### Enter to the directory 
-`cd react-starter`
+`cd react-ecommerce`
 
 ### Install Packages
 `npm install`
@@ -25,8 +17,3 @@ https://github.com/shrikant9907/react-starter.git
 
 It will open the project on default port: 
 http://localhost:3000/
-
-## Created By:
-Shrikant Yadav <br />
-Full Stack Web Developer from India <br />
-7+ Years in Web Development Technologies.

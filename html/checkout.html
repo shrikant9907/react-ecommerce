@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Checkout</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content=""/>
+
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">	
+	<link rel="stylesheet" href="css/countrySelect.css">	
+	<link rel="stylesheet" href="css/select2.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+	<!-- header code -->
+	<header>
+		<div class="hedtop_mainbar">
+			<a href="#">ENJOY UP TO 70% OFF. USE CODE NEWNESS</a>
+		</div>
+		<div class="headerdata_one">
+			<div class="container">
+				<div class="hedlengdata">
+					<form>
+						<div class="form-item">
+							<input id="country_selector" type="text">
+							<label for="country_selector" style="display:none;">Select a country here...</label>
+						</div>
+					</form>
+				</div>
+				<div class="midlogodata">
+					<a href="javascript:void(0);">
+						<img src="svg/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="rightuercartdata">
+					<div class="rightuercart_iner">
+						<div class="hed_userbtntop">
+							<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#signin">
+								<img src="svg/user-icon-hed.svg" alt="">
+							</a>
+						</div>
+						<div class="hed_wishlistbtntop">
+							<a href="javascript:void(0);">
+								<img src="svg/wishlist-icon-hed.svg" alt="">
+							</a>
+						</div>
+						<div class="hed_cartbtntop">
+							<div class="iSelect fixedWidth rounded">
+								<label for="chk">
+									<input aria-hidden="true" id="chk" type="checkbox">
+									<span class="select-label active" title="Select the model">
+										<img src="svg/cart-icon-hed.svg" class="cartnvimg" alt="">
+										<b>1</b>
+									</span>
+
+									<ul role="listbox">
+										<div class="maindicrtdati-cov">
+											<h3>My Cart</h3>
+											<div class="maindicrtdati-inr">
+												<div class="maindicrtdati-prodlst">
+													<div class="maindicrtdati-left">
+														<img src="images/product-img.png" alt="Product">
+													</div>
+													<div class="maindicrtdati-right">
+														<a href="javascript:void(0);">
+															Rust High Neck Frill Smock Dress
+														</a>
+														<h6>1 X $149.00</h6>
+													</div>
+													<a href="javascript:void(0);" class="cartdorp-remove"><i class='bx bx-x'></i></a>
+												</div>
+												<div class="maindicrtdati-prodlst">
+													<div class="maindicrtdati-left">
+														<img src="images/product-img.png" alt="Product">
+													</div>
+													<div class="maindicrtdati-right">
+														<a href="javascript:void(0);">
+															Rust High Neck Frill Smock Dress
+														</a>
+														<h6>2 X $149.00</h6>
+													</div>
+													<a href="javascript:void(0);" class="cartdorp-remove"><i class='bx bx-x'></i></a>
+												</div>
+												<div class="maindicrtdati-prodlst">
+													<div class="maindicrtdati-left">
+														<img src="images/product-img.png" alt="Product">
+													</div>
+													<div class="maindicrtdati-right">
+														<a href="javascript:void(0);">
+															Rust High Neck Frill Smock Dress
+														</a>
+														<h6>2 X $149.00</h6>
+													</div>
+													<a href="javascript:void(0);" class="cartdorp-remove"><i class='bx bx-x'></i></a>
+												</div>
+												<div class="carttog-total">
+													<h5>TOTAL PRICE</h5>
+													<h4>$538.00</h4>
+												</div>
+												<div class="togcart-myvcartalbtn">
+													<a href="javascript:void(0);" class="tog-viewcartbtn">View My Cart</a>
+													<a href="javascript:void(0);" class="tog-gotodesh">Go To checkout</a>
+													<a href="javascript:void(0);" class="tog-clearcart">Clear Cart</a>
+												</div>
+											</div>
+										</div>
+									</ul>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="headerdata_nav">
+					<div class="headerdata_manu">
+						<nav class="navbar navbar-expand-lg navbar-light ">
+							<div class="cover-namenulogonav">
+								<!-- <div class="left-navmenulogo">
+									<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="navbar-toggler-icon"></span>
+									</button>
+								</div> -->
+								<div class="collapse navbar-collapse right-hednavmaincov" id="navbarSupportedContent">
+									<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+										<li class="nav-item dropdown actmenudaminbtn">
+											<a class="nav-link dropdown-toggle d-menu" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+												Women <svg class="navarrowbtnmenu" id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+													<polyline points="6 9 12 15 18 9"></polyline>
+													</svg>
+											</a>
+										</li>
+										<li class="nav-item dropdown">
+											<a class="nav-link dropdown-toggle d-menu" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+												Men <svg class="navarrowbtnmenu" id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+													<polyline points="6 9 12 15 18 9"></polyline>
+													</svg>
+											</a>
+										</li>
+										<li class="nav-item dropdown">
+											<a class="nav-link dropdown-toggle d-menu" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+												Kids <svg class="navarrowbtnmenu" id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+													<polyline points="6 9 12 15 18 9"></polyline>
+													</svg>
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#">Electronics</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="headerdata_search">
+						<input type="text" placeholder="Search Here">
+						<button><img src="images/search-icon.png" alt=""></button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="headerdata_two">
+			<div class="container">
+				<div class="mobile_headercov">
+					<div class="mobile_headerleft">
+						<a href="javascript:void(0);">
+							<img src="images/logo.png" alt="">
+						</a>
+					</div>
+					<div class="mobile_headeright">
+						<div class="hedlengdata mobile_setbox">
+							<form>
+								<div class="form-item">
+									<input id="country_selector2" type="text">
+									<label for="country_selector" style="display:none;">Select a country here...</label>
+								</div>
+							</form>
+						</div>
+						
+						<div class="mobile_heduser1">
+							<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#signup_mobile">
+								<img src="svg/user-icon-hed.svg" alt="">
+							</a>
+						</div>
+						<div class="mobile_hedusearch">
+							<!-- <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#signin">
+								<img src="svg/search-icon-hed.svg" alt="">
+							</a> -->
+							<div id="wrap">
+								<form action="" autocomplete="on">
+								<input id="search" name="search" type="text" placeholder="Search Here"><input id="search_submit" value="Rechercher" type="submit">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="botmenucetsltmain">
+				<div class="container">
+					<ul> 
+						<li class="active">
+							<a href="javascript:void(0);">Women</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">Men</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">Kids</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">Electronics</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="hedsubmenu_listcov">
+			<div class="container">
+				<ul>
+					<li>
+						<a href="javascript:void(0);">Brand</a>
+					</li>
+					<li><a href="javascript:void(0);">Accessories</a></li>
+					<li><a href="javascript:void(0);">Sports</a></li>
+					<li><a href="javascript:void(0);">Bags</a></li>
+					<li><a href="javascript:void(0);" class="browse item">Shoes</a></li>
+					<li class="mega-dropdown menusumegamin_cov">
+						<a href="javascript:void(0);" class="browse item">New Arivals</a>
+						<div class="megamenu">
+							<div class="mainmegamenusetcov">
+								<div class="mainmegamenuset_navlist rightbordermegasub">
+									<h5>SHOP BY PRODUCT</h5>
+									<a href="">Shoes</a>
+									<a href="">Accessories</a>
+									<a href="">Bags</a>
+									<a href="">Beauty</a>
+									<a href="">Home & gifting</a>
+									<a href="">sports</a>
+									<a href="">Boutique</a>
+									<a href="">Streetwear</a>
+									<a href="">Modest</a>
+								</div>
+								<div class="mainmegamenuset_navlist">
+									<h5>SHOP BY New in</h5>
+									<a href="">Dresses</a>
+									<a href="">TOpS</a>
+									<a href="">T-shirts & vests</a>
+									<a href="">Arabian clothing</a>
+									<a href="">Pants & leggings</a>
+									<a href="">Abayas</a>
+									<a href="">Jumpsuits & Playsuits</a>
+									<a href="">Hoodies & sweatshirts</a>
+									<a href="">Skirts</a>
+									<a href="">Jackets & coats</a>
+								</div>
+								<div class="mainmegamenuset_imgdata">
+									<img src="images/mega-menu-img.png" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="javascript:void(0);">Clothing</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- header code -->
+
+	<div class="bredcu-main">
+		<div class="container">
+			<ul>
+				<li>
+					<a href="javascript:void(0);">Home</a>
+					<img src="svg/next-icon.svg" alt="">
+				</li>
+				<li>
+					<p>Shopping Cart</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container maincartcheotpage">
+		<div class="row">
+			<div class="col-12">
+				<div class="mainchekoutform-card">
+					<form id="msform">
+						<!-- progressbar -->
+						<ul id="progressbar" class="prodrformcartchot-cov">
+							<li class="formset-one active" id="account">
+								<p>Your Shopping Cart</p>
+							</li>
+							<li class="formset-two" id="personal">
+								<p>Shipping Address</p>
+							</li>
+							<li class="formset-three" id="payment">
+								<p>Payment Methods</p>
+							</li>
+							<!-- <li id="confirm"><strong>Finish</strong></li> -->
+						</ul>
+
+						<!-- form all pages -->
+						<fieldset>
+							<div class="cartcheckotpage-cov">
+								
+								<div class="cartcheckotpage-right">
+									<div class="orderSummary-box">
+										<div class="ordsumm-title">
+											<h3>Order Summary</h3>
+										</div>
+										<div class="orderSumma-main1">
+											<div class="orderSumma-maincov1">
+												<div class="ordSummain-left">
+													<p>Items 3 </p>
+												</div>
+												<div class="ordSummain-right">
+													<p>$447.00</p>
+												</div>
+											</div>
+											<div class="orderSumma-maincov1">
+												<div class="ordSummain-left">
+													<p>Shipping Charges</p>
+												</div>
+												<div class="ordSummain-right">
+													<p>$20.00</p>
+												</div>
+											</div>
+											<div class="orderSumma-maincov1">
+												<div class="ordSummain-left">
+													<p>Tax</p>
+												</div>
+												<div class="ordSummain-right">
+													<p>$2.00</p>
+												</div>
+											</div>
+											<div class="orderSumma-maincov1">
+												<div class="ordSummain-left">
+													<p>Discount</p>
+												</div>
+												<div class="ordSummain-right">
+													<p>$0.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="sumertotal-cost">
+											<div class="sumertotacost-left">
+												<p>TOTAL COST</p>
+											</div>
+											<div class="sumertotacost-right">
+												<p>$469.00</p>
+											</div>
+										</div>
+										<div class="applydiscot-main">
+											<h6>Apply Discount Code</h6>
+											<div class="applydiscot-form">
+												<input type="text" placeholder="Enter discount code">
+												<a href="javascript:void(0);">Apply</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cartcheckotpage-left">
+									<div class="cartcheckotpage-title">
+										<h2>Your Shopping Cart</h2>
+									</div>
+									<div class="cartcheckotpage-carttbl">
+										<table class="table">
+											<thead>
+											  <tr>
+												<th scope="col">Product</th>
+												<th scope="col">Price</th>
+												<th scope="col">Quantity</th>
+												<th scope="col"></th>
+											  </tr>
+											</thead>
+											<tbody>
+											  	<tr>
+													<td class="prodeist-tbl">
+														<img src="images/product-img.png" alt="">
+														<p>Rust High Neck Frill <br>
+														Smock Dress</p></td>
+													<td>$149.00</td>
+													<td class="carcpuntdata">
+														<div class="button-container carcpunt-inercot">
+															<button class="cart-qty-minus" type="button" value="-">-</button>
+															<input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+															<button class="cart-qty-plus" type="button" value="+">+</button>
+														</div>	
+													</td>
+													<td class="catprod-remove">
+														<a href="javascript:void(0);"><i class='bx bx-x'></i></a>
+													</td>
+											  	</tr>
+												<tr>
+													<td class="prodeist-tbl">
+														<img src="images/product-img.png" alt="">
+														<p>Rust High Neck Frill <br>
+														Smock Dress</p></td>
+													<td>$149.00</td>
+													<td class="carcpuntdata">
+														<div class="button-container carcpunt-inercot">
+															<button class="cart-qty-minus" type="button" value="-">-</button>
+															<input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+															<button class="cart-qty-plus" type="button" value="+">+</button>
+														</div>	
+													</td>
+													<td class="catprod-remove">
+														<a href="javascript:void(0);"><i class='bx bx-x'></i></a>
+													</td>
+											  	</tr>
+												 
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							
+							<br>
+							<input type="button" name="next" class="next action-button nxtprvbtnsetmaincov1" value="Continue to checkout" />
+							<div class="cotcoshop-albtncart">
+								<a href="javascript:void(0);">Continue Shopping</a>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="cartcheckotpage-cov">
+								
+								<div class="cartcheckotpage-right">
+									<div class="orderSummary-box">
+										<div class="ordsumm-title">
+											<h3>Order Summary</h3>
+										</div>
+										<div class="ordsmrwithimgteprod_cov">
+											<div class="ordsmrwithimgteprod_iner">
+												<div class="ordsmrwithimgteprod_left">
+													<img src="images/product-img.png" alt="">
+													<h5>Smock Dress</h5>
+													<p>Qty - 1</p>
+												</div>
+												<div class="ordsmrwithimgteprod_right">
+													<p>$149.00</p>
+												</div>
+											</div>
+											<div class="ordsmrwithimgteprod_iner">
+												<div class="ordsmrwithimgteprod_left">
+													<img src="images/product-img.png" alt="">
+													<h5>Smock Dress</h5>
+													<p>Qty - 1</p>
+												</div>
+												<div class="ordsmrwithimgteprod_right">
+													<p>$149.00</p>
+												</div>
+											</div>
+											<div class="ordsmrwithimgteprod_iner">
+												<div class="ordsmrwithimgteprod_left">
+													<img src="images/product-img.png" alt="">
+													<h5>Smock Dress</h5>
+													<p>Qty - 1</p>
+												</div>
+												<div class="ordsmrwithimgteprod_right">
+													<p>$149.00</p>
+												</div>
+											</div>
+											<div class="seemorbtnlinkcovcrt">
+												<a href="#">See More</a>
+											</div>
+										</div>
+										<div class="orderSumma-main1">
+											
+											<div class="orderSumma-maincov1">
+												<div class="ordSummain-left">
+													<p>Shipping Charges</p>
+												</div>
+												<div class="ordSummain-right">
+													<p>$20.00</p>
+												</div>
+											</div>
+											<div class="orderSumma-maincov1">
+												<div class="ordSummain-left">
+													<p>Tax</p>
+												</div>
+												<div class="ordSummain-right">
+													<p>$2.00</p>
+												</div>
+											</div>
+											<div class="orderSumma-maincov1">
+												<div class="ordSummain-left">
+													<p>Discount</p>
+												</div>
+												<div class="ordSummain-right">
+													<p>$0.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="sumertotal-cost">
+											<div class="sumertotacost-left">
+												<p>TOTAL COST</p>
+											</div>
+											<div class="sumertotacost-right">
+												<p>$469.00</p>
+											</div>
+										</div>
+										<div class="applydiscot-main">
+											<h6>Apply Discount Code</h6>
+											<div class="applydiscot-form">
+												<input type="text" placeholder="Enter discount code">
+												<a href="javascript:void(0);">Apply</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cartcheckotpage-left">
+									<div class="cartcheckotpage-title">
+										<h2>Shipping Address</h2>
+									</div>
+									<div class="shipaddress-maincov" >
+										<h6><a href="javascript:void(0);">Already have an account? Log in</a></h6>
+										<div class="shipaddressformset">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="comsignupinset-inerform">
+														<div class="form-group">
+															<input type="text" class="form-control" id="" placeholder="Enter First name">
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="comsignupinset-inerform">
+														<div class="form-group">
+															<input type="text" class="form-control" id="" placeholder="Enter Last name">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="comsignupinset-inerform">
+												<div class="form-group">
+													<input type="text" class="form-control" id="" placeholder="Company (optional)">
+												</div>
+											</div>
+											<div class="comsignupinset-inerform">
+												<div class="form-group">
+													<input type="text" class="form-control" id="" placeholder="Apartment, Suite, etc, (optional)">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-8">
+													<div class="comsignupinset-inerform">
+														<div class="form-group">
+															<select class="js-example-basic-single" name="gender">
+																<option value="">City</option>
+																<option value="">City</option>
+																<option value="">City</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="comsignupinset-inerform">
+														<div class="form-group locationaddership">
+															<i class='bx bxs-map'></i>
+															<input type="text" class="form-control" id="" placeholder="Find Location">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-4">
+													<div class="comsignupinset-inerform">
+														<div class="form-group">
+															<select class="js-example-basic-single" name="gender">
+																<option value="">Select Country</option>
+																<option value="">Select Country</option>
+																<option value="">Select Country</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="comsignupinset-inerform">
+														<div class="form-group">
+															<select class="js-example-basic-single" name="gender">
+																<option value="">Select State</option>
+																<option value="">Select State</option>
+																<option value="">Select State</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="comsignupinset-inerform">
+														<div class="form-group">
+															<input type="text" class="form-control" id="" placeholder="ZIP Code">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="comsignupinset-inerform">
+												<div class="form-group">
+													<div class="sltmobileaninput">
+														<input type="text" class="form-control" id="" placeholder="Enter Mobile No">
+														<select class="js-example-basic-single" name="gender">
+															<option value="">+973</option>
+															<option value="">+91</option>
+															<option value="">+92</option>
+															<option value="">+93</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="siginup-newlettbox">
+												<div class="custom_checkbox">
+													<label class="control control--checkbox">
+													<p>Save this information for next time</p>
+													<input type="checkbox" checked="checked">
+													<div class="control__indicator"></div>
+													</label>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+									<div class="shpadderandmethod" style="display: none;">
+										<div class="shipadderparttwoset-cov">
+											<div class="shipadderparttwoset-iner righadder-borderst">
+												<h4>Contact</h4>
+												<p>Street:  2586 West Street</p>
+												<p>City:  Wyoming</p>
+												<p>State/province/area:   Michigan</p>
+												<p>Phone number  616-717-8179</p>
+												<p>Zip code  49509</p>
+											</div>
+											<div class="shipadderparttwoset-iner">
+												<h4>Ship to</h4>
+												<p>Street:  2586 West Street</p>
+												<p>City:  Wyoming</p>
+												<p>State/province/area:   Michigan</p>
+												<p>Phone number  616-717-8179</p>
+												<p>Zip code  49509</p>
+											</div>
+										</div>
+										<div class="shipmethoddata-main">
+											<div class="shipmethoddata-cov">
+												<h3>Shipping Method</h3>
+											</div>
+											<div class="bhdlistdatchboxall-main">
+												<div class="bhdlistdatchboxall-left">
+													<div class="custom_checkbox">
+														<label class="control control--checkbox">
+															<input type="checkbox" checked="checked">
+															<div class="control__indicator"></div>
+														</label>
+													</div>
+												</div>
+												<div class="bhdlistdatchboxall-mid">
+													<p>BHD 1</p>
+												</div>
+												<div class="bhdlistdatchboxall-right">
+													<p>Aramex</p>
+												</div>
+											</div>
+											<div class="bhdlistdatchboxall-main">
+												<div class="bhdlistdatchboxall-left">
+													<div class="custom_checkbox">
+														<label class="control control--checkbox">
+															<input type="checkbox" checked="checked">
+															<div class="control__indicator"></div>
+														</label>
+													</div>
+												</div>
+												<div class="bhdlistdatchboxall-mid">
+													<p>BHD 1</p>
+												</div>
+												<div class="bhdlistdatchboxall-right">
+													<p>SMSA EXPRESS</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<input type="button" name="next" class="next action-button nxtprvbtnsetmaincov1" value="Continue to shipping" /> 
+							<!-- <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> -->
+
+							<div class="cotcoshop-albtncart">
+								<a href="javascript:void(0);">Return to cart</a>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="cartcheckotpage-cov">
+								
+								<div class="cartcheckotpage-right">
+									<div class="orderSummary-box">
+										<div class="ordsumm-title">
+											<h3>Order Summary</h3>
+										</div>
+										<div class="ordsmrwithimgteprod_cov">
+											<div class="ordsmrwithimgteprod_iner">
+												<div class="ordsmrwithimgteprod_left">
+													<img src="images/product-img.png" alt="">
+													<h5>Smock Dress</h5>
+													<p>Qty - 1</p>
+												</div>
+												<div class="ordsmrwithimgteprod_right">
+													<p>$149.00</p>
+												</div>
+											</div>
+											<div class="ordsmrwithimgteprod_iner">
+												<div class="ordsmrwithimgteprod_left">
+													<img src="images/product-img.png" alt="">
+													<h5>Smock Dress</h5>
+													<p>Qty - 1</p>
+												</div>
+												<div class="ordsmrwithimgteprod_right">
+													<p>$149.00</p>
+												</div>
+											</div>
+											<div class="ordsmrwithimgteprod_iner">
+												<div class="ordsmrwithimgteprod_left">
+													<img src="images/product-img.png" alt="">
+													<h5>Smock Dress</h5>
+													<p>Qty - 1</p>
+												</div>
+												<div class="ordsmrwithimgteprod_right">
+													<p>$149.00</p>
+												</div>
+											</div>
+											<div class="seemorbtnlinkcovcrt">
+												<a href="#">See More</a>
+											</div>
+										</div>
+										<div class="orderSumma-main1">
+											
+											<div class="orderSumma-maincov1">
+												<div class="ordSummain-left">
+													<p>Shipping Charges</p>
+												</div>
+												<div class="ordSummain-right">
+													<p>$20.00</p>
+												</div>
+											</div>
+											<div class="orderSumma-maincov1">
+												<div class="ordSummain-left">
+													<p>Tax</p>
+												</div>
+												<div class="ordSummain-right">
+													<p>$2.00</p>
+												</div>
+											</div>
+											<div class="orderSumma-maincov1">
+												<div class="ordSummain-left">
+													<p>Discount</p>
+												</div>
+												<div class="ordSummain-right">
+													<p>$0.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="sumertotal-cost">
+											<div class="sumertotacost-left">
+												<p>TOTAL COST</p>
+											</div>
+											<div class="sumertotacost-right">
+												<p>$469.00</p>
+											</div>
+										</div>
+										<div class="applydiscot-main">
+											<h6>Apply Discount Code</h6>
+											<div class="applydiscot-form">
+												<input type="text" placeholder="Enter discount code">
+												<a href="javascript:void(0);">Apply</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cartcheckotpage-left">
+									<div class="cartcheckotpage-title">
+										<h2>Payment Methods</h2>
+									</div>
+									<div class="paymentmetho-main">
+										<h5>All transactions are secure and encrypted.</h5>
+										<div class="paymentmetho-iner">
+											<div class="accordion" id="paymentcarddata">
+												<div class="accordion-item">
+												  	<h2 class="accordion-header" id="checkmonyorder">
+														<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#creditcartacod" aria-expanded="true" aria-controls="creditcartacod">
+															<span class="redbtnsetopt"></span>
+															Credit card
+														</button>
+												  	</h2>
+												  	<div id="creditcartacod" class="accordion-collapse collapse show" aria-labelledby="checkmonyorder" data-bs-parent="#paymentcarddata">
+														<div class="accordion-body" style="padding-bottom: 0px;">
+															<div class="cartpaymentdata-rcv">
+																<div class="form-group">
+																	<input type="text" class="form-control" id="" placeholder="Card Number" style="padding-right: 40px;">
+																	<i class='bx bxs-lock'></i>
+																</div>
+																<div class="form-group">
+																	<input type="text" class="form-control" id="" placeholder="Name Of Card">
+																</div>
+																<div class="row">
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<input type="text" class="form-control" id="" placeholder="Expiration date (MM / YY)">
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<input type="text" class="form-control" id="" placeholder="Security code">
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+												  	</div>
+												</div>
+												<!-- <div class="accordion-item">
+												  	<h2 class="accordion-header" id="checkmonyorder">
+														<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#checkmonyorderacod" aria-expanded="false" aria-controls="checkmonyorderacod">
+															<span class="redbtnsetopt"></span>
+															Check / Money order
+														</button>
+												  	</h2>
+												  	<div id="checkmonyorderacod" class="accordion-collapse collapse" aria-labelledby="checkmonyorder" data-bs-parent="#paymentcarddata">
+														<div class="accordion-body">
+															
+														</div>
+												  	</div>
+												</div> -->
+											</div>
+											<div class="plans">
+												<label class="plan basic-plan" for="basic">
+													<input type="radio" name="plan" id="basic" />
+													<div class="plan-content">
+													  	<div class="plan-details">
+															<p>Check / Money order</p>
+													  	</div>
+													</div>
+												</label>
+												<label class="plan complete-plan" for="complete">
+													<input type="radio" id="complete" name="plan" />
+													<div class="plan-content">
+													  	<div class="plan-details">
+															<p>Cash on delivery</p>
+													  	</div>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="billinadderdata-cov">
+										<h5>Billing address</h5>
+										<div class="custom_checkbox">
+											<label class="control control--checkbox">
+											<p>Same as shipping address</p>
+											<input type="checkbox" checked="checked">
+											<div class="control__indicator"></div>
+											</label>
+										</div>
+										<div class="custom_checkbox">
+											<label class="control control--checkbox">
+											<p>Use a different billing address</p>
+											<input type="checkbox" checked="checked">
+											<div class="control__indicator"></div>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <input type="button" name="next" class="next action-button nxtprvbtnsetmaincov1" value="Pay Now" /> -->
+							<div class="cotcoshop-albtncart">
+								<button>Pay Now</button>
+								<a href="javascript:void(0);">Return to shipping</a>
+							</div>
+							<!-- <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> -->
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!-- footer code -->
+<div class="mainfooter-cover">
+	<div class="container">
+		<div class="whyshop-sectcov">
+			<h3>WHY SHOP WITH US?</h3>
+			<div class="whyshop-sectiner">
+				<div class="whyshop-sectibox">
+					<img src="images/footer-icon1.png" alt="">
+					<h4>CASH ON DELIVERY</h4>
+					<p>Pay by cash when receiving your order</p>
+				</div>
+				<div class="whyshop-sectibox borderlrfix">
+					<img src="images/footer-icon2.png" alt="">
+					<h4>FREE & EASY RETURNS</h4>
+					<p>We collect items you want to return
+						from your doorstep free of charge</p>
+				</div>
+				<div class="whyshop-sectibox">
+					<img src="images/footer-icon3.png" alt="">
+					<h4>NO SURPRISES</h4>
+					<p>Your order total is 100% guaranteed.
+						There will be no additional charges
+						due upon delivery</p>
+				</div>
+			</div>
+		</div>
+		<div class="offiappdow-box">
+			<h3>newness OFFICIAL APPS</h3>
+			<a href="javascript:void(0);">
+				<img src="images/app-store-icon.png" alt="">
+			</a>
+			<a href="javascript:void(0);">
+				<img src="images/play-store-icon.png" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="subcribenews-cov">
+			<div class="subcribenews-iner">
+				<p>Subcribe To our News</p>
+				<div class="subcribenews-form">
+					<input type="text" placeholder="Enter Email Address">
+					<button>Search</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footernav-topmain">
+			<div class="container">
+				<div class="footernav-topiner">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="left-footlogosoc">
+								<a href="javascript:void(0);" class="footerlogo">
+									<img src="images/logo.png" alt="">
+								</a>
+								<p>A lifestyle app that believes you are capable of control. Selling 1000+ authentic brands with over 250,000 products. Offering to 1,000,000 users worldwide. With our 24/7 customer service, tackle any issues you may face. Instantly.</p>
+								<ul>
+									<h3>Connect With Newness</h3>
+									<li>
+										<a href="javascript:void(0);">
+											<img src="images/social-icon-1.png" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											<img src="images/social-icon-2.png" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											<img src="images/social-icon-3.png" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											<img src="images/social-icon-4.png" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											<img src="images/social-icon-5.png" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="footernav-menulist">
+								<ul>
+									<h3>Infomation</h3>
+									<li><a href="javascript:void(0);">About Us</a></li>
+									<li><a href="javascript:void(0);">Contact Us</a></li>
+									<li><a href="javascript:void(0);">Terms & Conditions</a></li>
+									<li><a href="javascript:void(0);">Returns & Refunds</a></li>
+									<li><a href="javascript:void(0);">Shipping & Delivery</a></li>
+									<li><a href="javascript:void(0);">Privacy Policy</a></li>
+									<li><a href="javascript:void(0);">FAQs</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="footernav-menulist">
+								<ul>
+									<h3>Quick Links</h3>
+									<li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#signin">My Account</a></li>
+									<li><a href="javascript:void(0);">Wishlist</a></li>
+									<li><a href="javascript:void(0);">All Brands</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="mobilefootlinksetcov">
+							<div class="accordion" id="accordionExample">
+								<div class="accordion-item">
+									  <h2 class="accordion-header" id="headingOne">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+											Infomation
+										</button>
+									  </h2>
+									<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											<ul>
+												<li><a href="javascript:void(0);">About Us</a></li>
+												<li><a href="javascript:void(0);">Contact Us</a></li>
+												<li><a href="javascript:void(0);">Terms & Conditions</a></li>
+												<li><a href="javascript:void(0);">Returns & Refunds</a></li>
+												<li><a href="javascript:void(0);">Shipping & Delivery</a></li>
+												<li><a href="javascript:void(0);">Privacy Policy</a></li>
+												<li><a href="javascript:void(0);">FAQs</a></li>
+											</ul>
+										</div>
+									  </div>
+								</div>
+								<div class="accordion-item">
+									  <h2 class="accordion-header" id="headingTwo">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											Quick Links
+										</button>
+									  </h2>
+									  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											<ul>
+												<li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#signup_mobile">My Account</a></li>
+												<li><a href="javascript:void(0);">Wishlist</a></li>
+												<li><a href="javascript:void(0);">All Brands</a></li>
+											</ul>
+										</div>
+									  </div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-payoptlist">
+			<div class="container">
+				<div class="footer-payoptiner">
+					<p>We Accept</p>
+					<a href="javascript:void(0);"><img src="images/payment-icon1.png" alt=""></a>
+					<a href="javascript:void(0);"><img src="images/payment-icon2.png" alt=""></a>
+					<a href="javascript:void(0);"><img src="images/payment-icon3.png" alt=""></a>
+					<a href="javascript:void(0);"><img src="images/payment-icon4.png" alt=""></a>
+					<a href="javascript:void(0);"><img src="images/payment-icon5.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<!-- footer code -->
+
+<div class="tabnavdata-covlist">
+	<ul>
+		<li class="active">
+			<a href="javascript:void(0);">
+				<i class='bx bx-home'></i>
+				<span>Home</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">
+				<i class='bx bx-gift'></i>
+				<span>Gift</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">
+				<i class='bx bx-category'></i>
+				<span>Category</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">
+				<i class='bx bx-heart'></i>
+				<span>Wishlist</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);">
+				<i class='bx bx-cart'></i>
+				<span>Cart</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+
+
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/countrySelect.js"></script>
+	<script src="js/bootstrap-datepicker.min.js"></script>	
+	<script src="js/select2.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			update_amounts();
+			$('.qty, .price').on('keyup keypress blur change', function(e) {
+				update_amounts();
+			});
+		});
+		function update_amounts(){
+			var sum = 0.0;
+				$('.choose-traveller-listed .row').each(function() {
+					var qty = $(this).find('.qty').val();
+					var price = $(this).find('.price').val();
+					var amount = (qty*price)
+					sum+=amount;
+					$(this).find('.amount').text(''+amount);
+				});
+			$('.total').text(sum);
+		}
+
+		//----------------for quantity-increment-or-decrement-------
+		var incrementQty;
+		var decrementQty;
+		var plusBtn  = $(".cart-qty-plus");
+		var minusBtn = $(".cart-qty-minus");
+		var incrementQty = plusBtn.click(function() {
+			var $n = $(this)
+				.parent(".button-container")
+				.find(".qty");
+			$n.val(Number($n.val())+1 );
+			update_amounts();
+		});
+
+		var decrementQty = minusBtn.click(function() {
+				var $n = $(this)
+				.parent(".button-container")
+				.find(".qty");
+			var QtyVal = Number($n.val());
+			if (QtyVal > 0) {
+				$n.val(QtyVal-1);
+			}
+			update_amounts();
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+
+		var current_fs, next_fs, previous_fs; //fieldsets
+		var opacity;
+		var current = 1;
+		var steps = $("fieldset").length;
+
+		setProgressBar(current);
+
+		$(".next").click(function(){
+
+		current_fs = $(this).parent();
+		next_fs = $(this).parent().next();
+
+		//Add Class Active
+		$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+		//show the next fieldset
+		next_fs.show();
+		//hide the current fieldset with style
+		current_fs.animate({opacity: 0}, {
+		step: function(now) {
+		// for making fielset appear animation
+		opacity = 1 - now;
+
+		current_fs.css({
+		'display': 'none',
+		'position': 'relative'
+		});
+		next_fs.css({'opacity': opacity});
+		},
+		duration: 500
+		});
+		setProgressBar(++current);
+		});
+
+		$(".previous").click(function(){
+
+		current_fs = $(this).parent();
+		previous_fs = $(this).parent().prev();
+
+		//Remove class active
+		$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+		//show the previous fieldset
+		previous_fs.show();
+
+		//hide the current fieldset with style
+		current_fs.animate({opacity: 0}, {
+		step: function(now) {
+		// for making fielset appear animation
+		opacity = 1 - now;
+
+		current_fs.css({
+		'display': 'none',
+		'position': 'relative'
+		});
+		previous_fs.css({'opacity': opacity});
+		},
+		duration: 500
+		});
+		setProgressBar(--current);
+		});
+
+		function setProgressBar(curStep){
+		var percent = parseFloat(100 / steps) * curStep;
+		percent = percent.toFixed();
+		$(".progress-bar")
+		.css("width",percent+"%")
+		}
+
+		// $(".submit").click(function(){
+		// return false;
+		// })
+
+		});
+
+	
+
+		
+		
+
+		$('.js-example-basic-single').select2({
+			minimumResultsForSearch: -1
+		});
+		$(function () {
+			$("#datepicker").datepicker({ 
+					autoclose: true, 
+					todayHighlight: true
+			});
+		});
+		$(function () {
+			$("#datepicker1").datepicker({ 
+					autoclose: true, 
+					todayHighlight: true
+			});
+		});
+
+		$("#country_selector").countrySelect({
+			defaultCountry: "bd",
+			onlyCountries: ['bd', 'ae', 'bh', 'sa'],
+			// responsiveDropdown: true,
+			//preferredCountries: ['ca', 'gb', 'us']
+			responsiveDropdown: true
+		});
+		$("#country_selector2").countrySelect({
+			defaultCountry: "bd",
+			onlyCountries: ['bd', 'ae', 'bh', 'sa'],
+			// responsiveDropdown: true,
+			//preferredCountries: ['ca', 'gb', 'us']
+			responsiveDropdown: true
+		});
+
+		var iSelectDropDown = (function() {
+		var $el = $(".iSelect");
+		var $elListItem = $(".iSelect").find("ul li");
+		var $selectedText = $(".iSelect").find(".select-label");
+		function iSelect() {
+			$elListItem.on("click", function() {
+			$selectedText.text($(this).text()).attr('title', $(this).text());
+			});
+		}
+		return iSelect;
+		})();
+		var iselect = new iSelectDropDown();
+	</script>
+
+</body>
+</html>

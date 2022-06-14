@@ -7,7 +7,7 @@ const App = () => {
   return (
     <Router>
 
-      <BsNavbar brandname="React Starter Logo" logotype="text" logosrc="" />
+      <BsNavbar brandname="React E-Commerce Logo" logotype="text" logosrc="" />
       
       <Routes>
         {/* Top Menu Routes Configuration is in _config/TopMenus.js */}
