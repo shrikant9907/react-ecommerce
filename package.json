@@ -1,5 +1,6 @@
 {
   "name": "react_starter",
+  "homepage": "https://shrikant9907.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -36,7 +37,9 @@
     "build:stage": "env-cmd -f .env.development react-scripts build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
