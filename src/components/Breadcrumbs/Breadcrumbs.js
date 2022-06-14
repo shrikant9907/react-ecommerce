@@ -1,17 +1,24 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import './Banner.scss';
-import BannerImg from "../../_assets/images/banner/banner.jpg"; 
+import { useNavigate } from 'react-router-dom';
+import { NextIcon } from '../../_assets/icons/Icons';
 
-const Banner = (props) => {
+const Breadcrumbs = (props) => {
+
+  let navigate = useNavigate(); 
+
+  const navigateToHome = (e) =>{ 
+    e.preventDefault();
+    navigate('/');
+  }
+
   return (
     <>
-      <div class="bredcu-main">
-        <div class="container">
+      <div className="bredcu-main">
+        <div className="container">
           <ul>
             <li>
-              <a href="javascript:void(0);">Home</a>
-              <img src="svg/next-icon.svg" alt="" />
+              <a onClick={(e) => navigateToHome(e)} href="javascript:void(0);">Home</a>
+              <NextIcon />
             </li>
             <li>
               <p>Shopping Cart</p>
@@ -23,4 +30,4 @@ const Banner = (props) => {
   )
 }
 
-export default Banner;
+export default Breadcrumbs;

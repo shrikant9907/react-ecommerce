@@ -1,27 +1,33 @@
-import Checkbox from "../components/common/Form/CheckBox/CheckBox";
+import CheckoutPage from "../layouts/Checkout";
 import Home from "../layouts/home";
+import ShopPage from "../layouts/Shop";
 
 // Top Menu Paths
 export const TopMenusRoutes = [
   {
-    path: "/",
-    exact: true,
-    element: <Home />
-  },
-  {
     path: "/cart",
     exact: true,
-    element: <Checkbox />
+    element: <CheckoutPage />
   },
   {
     path: "/checkout",
     exact: true,
-    element: <Checkbox />
+    element: <CheckoutPage />
   },
   {
     path: "/payment",
     exact: true,
-    element: <Checkbox />
+    element: <CheckoutPage />
+  },
+  {
+    path: "/shop",
+    exact: true,
+    element: <ShopPage />
+  },
+  {
+    path: "/",
+    exact: true,
+    element: <Home />
   },
 ]
 

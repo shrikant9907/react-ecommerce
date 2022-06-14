@@ -1,61 +1,49 @@
 import './Footer.scss';
 import React from 'react';
-import { AmericanExpressIcon, AppStoreIcon, CartIcon, DiscoverIcon, DollarIcon, FacebookIcon, GiftIcon, GooglePlay, InstagramIcon, LinkedInIcon, Logo, MasterCardIcon, PaypalIcon, ReturnIcon, SearchIcon, TwitterIcon, UserIcon, VisaIcon, WishlistIcon, YoutubeIcon } from '../../_assets/icons/Icons';
+import { AmericanExpressIcon, AppStoreIcon, DiscoverIcon, DollarIcon, FacebookIcon, GiftIcon, GooglePlay, InstagramIcon, LinkedInIcon, Logo, MasterCardIcon, PaypalIcon, ReturnIcon, SearchIcon, TwitterIcon, UserIcon, VisaIcon, WishlistIcon, YoutubeIcon } from '../../_assets/icons/Icons';
 import { useNavigate } from 'react-router-dom';
-import ReactFlagsSelect from "react-flags-select";
 import { useState } from 'react';
 import { toast } from 'react-toastify';
   
 const Footer = (props) => {
-
-  const [selected, setSelected] = useState("");
-  
+ 
   let navigate = useNavigate(); 
+
   const handleLogoClick = (e) =>{ 
     e.preventDefault();
     navigate('/');
   }
 
-  const handleSearchByKeywords = (e) => {
+  const handleSubscribeField = (e) => {
     e.preventDefault();
     const {value} = e.target;
-    console.log("Search ", value )
+    console.log("Subscribe Email ", value )
   }
 
-  const handleCartClick = (e) => {
-    navigate('/cart');
-  }
-
-  const handleCheckoutClick = (e) => {
+  const handleSubscribeButton = (e) => {
     e.preventDefault();
-    navigate('/checkout');
-  }
-
-  const handleClearCartClick = (e) => {
-    e.preventDefault();
-    // Write Clear logic here
-    toast.success('Cart cleared successfully.')
+    console.log("Subscribe Button Clicked")
   }
 
   return (
     <>
-      <div class="mainfooter-cover">
-        <div class="container">
-          <div class="whyshop-sectcov">
+      <div className="mainfooter-cover">
+        <div className="container">
+          <div className="whyshop-sectcov">
             <h3>WHY SHOP WITH US?</h3>
-            <div class="whyshop-sectiner">
-              <div class="whyshop-sectibox">
+            <div className="whyshop-sectiner">
+              <div className="whyshop-sectibox">
                 <DollarIcon />
                 <h4>CASH ON DELIVERY</h4>
                 <p>Pay by cash when receiving your order</p>
               </div>
-              <div class="whyshop-sectibox borderlrfix">
+              <div className="whyshop-sectibox borderlrfix">
                 <ReturnIcon />
                 <h4>FREE & EASY RETURNS</h4>
                 <p>We collect items you want to return
                   from your doorstep free of charge</p>
               </div>
-              <div class="whyshop-sectibox">
+              <div className="whyshop-sectibox">
                 <GiftIcon />
                 <h4>NO SURPRISES</h4>
                 <p>Your order total is 100% guaranteed.
@@ -64,7 +52,7 @@ const Footer = (props) => {
               </div>
             </div>
           </div>
-          <div class="offiappdow-box">
+          <div className="offiappdow-box">
             <h3>newness OFFICIAL APPS</h3>
             <a href="javascript:void(0);">
               <AppStoreIcon />
@@ -74,25 +62,25 @@ const Footer = (props) => {
             </a>
           </div>
         </div>
-        <div class="container">
-          <div class="subcribenews-cov">
-            <div class="subcribenews-iner">
+        <div className="container">
+          <div className="subcribenews-cov">
+            <div className="subcribenews-iner">
               <p>Subcribe To our News</p>
-              <div class="subcribenews-form">
-                <input type="text" placeholder="Enter Email Address" />
-                <button>Search</button>
+              <div className="subcribenews-form">
+                <input type="email" onChange={(e) => handleSubscribeField(e)} placeholder="Enter Email Address" />
+                <button onChange={(e) => handleSubscribeButton(e)}>Subscribe</button>
               </div>
             </div>
           </div>
         </div>
         <footer>
-          <div class="footernav-topmain">
-            <div class="container">
-              <div class="footernav-topiner">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="left-footlogosoc">
-                      <a href="javascript:void(0);" class="footerlogo">
+          <div className="footernav-topmain">
+            <div className="container">
+              <div className="footernav-topiner">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="left-footlogosoc">
+                      <a href="javascript:void(0);" onClick={(e) => handleLogoClick(e)} className="footerlogo">
                         <Logo />
                       </a>
                       <p>A lifestyle app that believes you are capable of control. Selling 1000+ authentic brands with over 250,000 products. Offering to 1,000,000 users worldwide. With our 24/7 customer service, tackle any issues you may face. Instantly.</p>
@@ -126,8 +114,8 @@ const Footer = (props) => {
                       </ul>
                     </div>
                   </div>
-                  <div class="col-md-3">
-                    <div class="footernav-menulist">
+                  <div className="col-md-3">
+                    <div className="footernav-menulist">
                       <ul>
                         <h3>Infomation</h3>
                         <li><a href="javascript:void(0);">About Us</a></li>
@@ -140,8 +128,8 @@ const Footer = (props) => {
                       </ul>
                     </div>
                   </div>
-                  <div class="col-md-3">
-                    <div class="footernav-menulist">
+                  <div className="col-md-3">
+                    <div className="footernav-menulist">
                       <ul>
                         <h3>Quick Links</h3>
                         <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#signin">My Account</a></li>
@@ -150,16 +138,16 @@ const Footer = (props) => {
                       </ul>
                     </div>
                   </div>
-                  <div class="mobilefootlinksetcov">
-                    <div class="accordion" id="accordionExample">
-                      <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingOne">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <div className="mobilefootlinksetcov">
+                    <div className="accordion" id="accordionExample">
+                      <div className="accordion-item">
+                          <h2 className="accordion-header" id="headingOne">
+                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             Infomation
                           </button>
                           </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
+                        <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div className="accordion-body">
                             <ul>
                               <li><a href="javascript:void(0);">About Us</a></li>
                               <li><a href="javascript:void(0);">Contact Us</a></li>
@@ -172,14 +160,14 @@ const Footer = (props) => {
                           </div>
                           </div>
                       </div>
-                      <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingTwo">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <div className="accordion-item">
+                          <h2 className="accordion-header" id="headingTwo">
+                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Quick Links
                           </button>
                           </h2>
-                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
+                          <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div className="accordion-body">
                             <ul>
                               <li><a href="javascript:void(0);">My Account</a></li>
                               <li><a href="javascript:void(0);">Wishlist</a></li>
@@ -195,9 +183,9 @@ const Footer = (props) => {
               </div>
             </div>
           </div>
-          <div class="footer-payoptlist">
-            <div class="container">
-              <div class="footer-payoptiner">
+          <div className="footer-payoptlist">
+            <div className="container">
+              <div className="footer-payoptiner">
                 <p>We Accept</p>
                 <a href="javascript:void(0);"><PaypalIcon /></a>
                 <a href="javascript:void(0);"><VisaIcon /></a>
@@ -210,9 +198,9 @@ const Footer = (props) => {
         </footer>
       </div>
 
-      <div class="tabnavdata-covlist">
+      <div className="tabnavdata-covlist">
         <ul>
-          <li class="active">
+          <li className="active">
             <a href="javascript:void(0);">
               <i class='bx bx-home'></i>
               <span>Home</span>

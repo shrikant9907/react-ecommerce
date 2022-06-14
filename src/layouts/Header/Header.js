@@ -7,14 +7,18 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import SignInModal from '../../components/modal/SigninModal/SignInModal';
 import SignUpModal from '../../components/modal/SignUpModal/SignUpModal';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { showSignInModal } from '../../_actions/authModalActions';
-
+import { useLocation } from "react-router-dom"
 import ProductImage from "../../_assets/images/product-img.png";
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
   
 const Header = (props) => {
 
+  const location = useLocation()
   const dispatch = useDispatch();
+  const cartData = useSelector(state => state.cart.products);
+
   const [selected, setSelected] = useState("");
   
   let navigate = useNavigate(); 
@@ -93,18 +97,19 @@ const Header = (props) => {
                         <h3>My Cart</h3>
                         <div className="maindicrtdati-inr">
                         
-                          <div className="maindicrtdati-prodlst">
-                            <div className="maindicrtdati-left">
-                              <img src={ProductImage} alt="Product" />
+                          {cartData.map((product, pidx) => {
+                            return <div className="maindicrtdati-prodlst">
+                              <div className="maindicrtdati-left">
+                                <img src={product?.image} alt="Product" />
+                              </div>
+                              <div className="maindicrtdati-right">
+                                <a href="javascript:void(0);">{product?.title}</a>
+                                <h6>{product?.quantity} X ${product?.price}</h6>
+                              </div>
+                              <a href="javascript:void(0);" className="cartdorp-remove"><i className='bx bx-x'></i></a>
                             </div>
-                            <div className="maindicrtdati-right">
-                              <a href="javascript:void(0);">
-                                Rust High Neck Frill Smock Dress
-                              </a>
-                              <h6>1 X $149.00</h6>
-                            </div>
-                            <a href="javascript:void(0);" className="cartdorp-remove"><i className='bx bx-x'></i></a>
-                          </div>
+                          })
+                          }
 
                           <div className="carttog-total">
                             <h5>TOTAL PRICE</h5>
@@ -283,6 +288,7 @@ const Header = (props) => {
         </div>
       </div>
     </header>
+    {location.pathname !== '/' && <Breadcrumbs /> }
     <SignInModal />
     <SignUpModal />
     </>

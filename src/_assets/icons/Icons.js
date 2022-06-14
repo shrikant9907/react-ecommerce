@@ -19,6 +19,7 @@ import DiscoverIconPng from '../../_assets/images/payment-icon3.png'
 import MasterCardIconPng from '../../_assets/images/payment-icon4.png'
 import AmericanExpressIconPng from '../../_assets/images/payment-icon5.png'
 import SearchIconPng from '../../_assets/images/search-icon.png'
+import NextIconSvg from '../../_assets/svg/next-icon.svg'
 
 export const Logo = () => {
   return  <img src={LogoSvg} alt="Logo" />
@@ -98,4 +99,8 @@ export const AmericanExpressIcon = () => {
 
 export const SearchIcon = () => {
   return  <img src={SearchIconPng} alt="Search" />
+}
+
+export const NextIcon = () => {
+  return  <img src={NextIconSvg} alt="Next" />
 }
