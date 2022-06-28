@@ -6,6 +6,7 @@ import GoogleLoginSrc from '../../../_assets/images/google-icon.png';
 import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from "react-redux";
 import { hideSignInModal, showSignInModal, showSignUpModal } from "../../../_actions/authModalActions";
+import { Link } from "react-router-dom";
 
 const SignInModal = (props) => {
 
@@ -58,22 +59,22 @@ const SignInModal = (props) => {
                       </div>
                     </div>
                     <div className="forgotbnt-link">
-                      <a href="javascript:void(0);" onClick={() => handleForgotPassword()}>Forgot Your Password?</a>
+                      <Link to="/" onClick={() => handleForgotPassword()}>Forgot Your Password?</Link>
                     </div>
                     <div className="login-btnsetcov">
                       <button>Login</button>
                     </div>
                     <div className="with-signinbntset">
                       <h6>OR SIGN IN WITH</h6>
-                      <a href="javascript:void(0);">
+                      <Link to="/">
                         <img src={FacebookLoginSrc} alt="Login with Facebook" />
-                      </a>
-                      <a href="javascript:void(0);">
+                      </Link>
+                      <Link to="/">
                         <img src={GoogleLoginSrc} alt="Login with Google" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="newcretaccot-link">
-                      <a href="javascript:void(0);" onClick={(e) => handleCreateNewAccount(e)} >Create New Account?</a>
+                      <Link to="/" onClick={(e) => handleCreateNewAccount(e)} >Create New Account?</Link>
                     </div>
                   </div>
                 </div>

@@ -1,18 +1,9 @@
 import './Footer.scss';
 import React from 'react';
-import { AmericanExpressIcon, AppStoreIcon, DiscoverIcon, DollarIcon, FacebookIcon, GiftIcon, GooglePlay, InstagramIcon, LinkedInIcon, Logo, MasterCardIcon, PaypalIcon, ReturnIcon, SearchIcon, TwitterIcon, UserIcon, VisaIcon, WishlistIcon, YoutubeIcon } from '../../_assets/icons/Icons';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { toast } from 'react-toastify';
+import { AmericanExpressIcon, AppStoreIcon, DiscoverIcon, DollarIcon, FacebookIcon, GiftIcon, GooglePlay, InstagramIcon, LinkedInIcon, Logo, MasterCardIcon, PaypalIcon, ReturnIcon, TwitterIcon, VisaIcon, YoutubeIcon } from '../../_assets/icons/Icons';
+import { Link } from 'react-router-dom';
   
 const Footer = (props) => {
- 
-  let navigate = useNavigate(); 
-
-  const handleLogoClick = (e) =>{ 
-    e.preventDefault();
-    navigate('/');
-  }
 
   const handleSubscribeField = (e) => {
     e.preventDefault();
@@ -54,12 +45,12 @@ const Footer = (props) => {
           </div>
           <div className="offiappdow-box">
             <h3>newness OFFICIAL APPS</h3>
-            <a href="javascript:void(0);">
+            <Link to="/" target="_blank">
               <AppStoreIcon />
-            </a>
-            <a href="javascript:void(0);">
+            </Link>
+            <Link to="/" target="_blank">
               <GooglePlay />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="container">
@@ -80,36 +71,36 @@ const Footer = (props) => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="left-footlogosoc">
-                      <a href="javascript:void(0);" onClick={(e) => handleLogoClick(e)} className="footerlogo">
+                      <Link to="/" className="footerlogo">
                         <Logo />
-                      </a>
+                      </Link>
                       <p>A lifestyle app that believes you are capable of control. Selling 1000+ authentic brands with over 250,000 products. Offering to 1,000,000 users worldwide. With our 24/7 customer service, tackle any issues you may face. Instantly.</p>
                       <ul>
                         <h3>Connect With Newness</h3>
                         <li>
-                          <a href="javascript:void(0);">
+                          <Link to="/" target="_blank">
                             <InstagramIcon />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="javascript:void(0);">
+                          <Link to="/" target="_blank">
                             <FacebookIcon />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="javascript:void(0);">
+                          <Link to="/" target="_blank">
                             <TwitterIcon />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="javascript:void(0);">
+                          <Link to="/" target="_blank">
                             <YoutubeIcon />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="javascript:void(0);">
+                          <Link to="/" target="_blank">
                             <LinkedInIcon />
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -118,13 +109,13 @@ const Footer = (props) => {
                     <div className="footernav-menulist">
                       <ul>
                         <h3>Infomation</h3>
-                        <li><a href="javascript:void(0);">About Us</a></li>
-                        <li><a href="javascript:void(0);">Contact Us</a></li>
-                        <li><a href="javascript:void(0);">Terms & Conditions</a></li>
-                        <li><a href="javascript:void(0);">Returns & Refunds</a></li>
-                        <li><a href="javascript:void(0);">Shipping & Delivery</a></li>
-                        <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                        <li><a href="javascript:void(0);">FAQs</a></li>
+                        <li><Link to="/about-us">About Us</Link></li>
+                        <li><Link to="/contact-us">Contact Us</Link></li>
+                        <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
+                        <li><Link to="/returns-and-refunds">Returns & Refunds</Link></li>
+                        <li><Link to="/shipping-and-delivery">Shipping & Delivery</Link></li>
+                        <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                        <li><Link to="/faqs">FAQs</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -132,9 +123,9 @@ const Footer = (props) => {
                     <div className="footernav-menulist">
                       <ul>
                         <h3>Quick Links</h3>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#signin">My Account</a></li>
-                        <li><a href="javascript:void(0);">Wishlist</a></li>
-                        <li><a href="javascript:void(0);">All Brands</a></li>
+                        <li><Link to="/my-account">My Account</Link></li>
+                        <li><Link to="/wishlist">Wishlist</Link></li>
+                        <li><Link to="/all-brands">All Brands</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -149,13 +140,13 @@ const Footer = (props) => {
                         <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                           <div className="accordion-body">
                             <ul>
-                              <li><a href="javascript:void(0);">About Us</a></li>
-                              <li><a href="javascript:void(0);">Contact Us</a></li>
-                              <li><a href="javascript:void(0);">Terms & Conditions</a></li>
-                              <li><a href="javascript:void(0);">Returns & Refunds</a></li>
-                              <li><a href="javascript:void(0);">Shipping & Delivery</a></li>
-                              <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                              <li><a href="javascript:void(0);">FAQs</a></li>
+                              <li><Link to="/about-us">About Us</Link></li>
+                              <li><Link to="/contact-us">Contact Us</Link></li>
+                              <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
+                              <li><Link to="/returns-and-refunds">Returns & Refunds</Link></li>
+                              <li><Link to="/shipping-and-delivery">Shipping & Delivery</Link></li>
+                              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                              <li><Link to="/faqs">FAQs</Link></li>
                             </ul>
                           </div>
                           </div>
@@ -169,9 +160,9 @@ const Footer = (props) => {
                           <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                           <div className="accordion-body">
                             <ul>
-                              <li><a href="javascript:void(0);">My Account</a></li>
-                              <li><a href="javascript:void(0);">Wishlist</a></li>
-                              <li><a href="javascript:void(0);">All Brands</a></li>
+                              <li><Link to="/my-account">My Account</Link></li>
+                              <li><Link to="/wishlist">Wishlist</Link></li>
+                              <li><Link to="/all-brands">All Brands</Link></li>
                             </ul>
                           </div>
                           </div>
@@ -187,11 +178,11 @@ const Footer = (props) => {
             <div className="container">
               <div className="footer-payoptiner">
                 <p>We Accept</p>
-                <a href="javascript:void(0);"><PaypalIcon /></a>
-                <a href="javascript:void(0);"><VisaIcon /></a>
-                <a href="javascript:void(0);"><DiscoverIcon /></a>
-                <a href="javascript:void(0);"><MasterCardIcon /></a>
-                <a href="javascript:void(0);"><AmericanExpressIcon /></a>
+                <Link to="/"><PaypalIcon /></Link>
+                <Link to="/"><VisaIcon /></Link>
+                <Link to="/"><DiscoverIcon /></Link>
+                <Link to="/"><MasterCardIcon /></Link>
+                <Link to="/"><AmericanExpressIcon /></Link>
               </div>
             </div>
           </div>
@@ -201,34 +192,34 @@ const Footer = (props) => {
       <div className="tabnavdata-covlist">
         <ul>
           <li className="active">
-            <a href="javascript:void(0);">
+            <Link to="/">
               <i class='bx bx-home'></i>
               <span>Home</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="javascript:void(0);">
+            <Link to="/gift">
               <i class='bx bx-gift'></i>
               <span>Gift</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="javascript:void(0);">
+            <Link to="/category">
               <i class='bx bx-category'></i>
               <span>Category</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="javascript:void(0);">
+            <Link to="/wishlist">
               <i class='bx bx-heart'></i>
               <span>Wishlist</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="javascript:void(0);">
+            <Link to="/cart">
               <i class='bx bx-cart'></i>
               <span>Cart</span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,24 +1,27 @@
 import './Header.scss';
 import React from 'react';
 import { CartIcon, Logo, SearchIcon, UserIcon, WishlistIcon } from '../../_assets/icons/Icons';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ReactFlagsSelect from "react-flags-select";
 import { useState } from 'react';
-import { toast } from 'react-toastify';
 import SignInModal from '../../components/modal/SigninModal/SignInModal';
 import SignUpModal from '../../components/modal/SignUpModal/SignUpModal';
 import { useDispatch, useSelector } from 'react-redux';
 import { showSignInModal } from '../../_actions/authModalActions';
 import { useLocation } from "react-router-dom"
-import ProductImage from "../../_assets/images/product-img.png";
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import { emptyCart } from '../../_actions/cartActions';
-  
+import megaImage from "../../_assets/images/mega-menu-img.png"
+import { categoryLinks } from '../../_config/categoryLinks';
+
 const Header = (props) => {
 
   const location = useLocation()
   const dispatch = useDispatch();
   const cartData = useSelector(state => state.cart.products);
+
+  const [activeCategoryIndex, setActiveCategoryIndex] = useState(0)
+  const [activeCategory, setActiveCategory] = useState(categoryLinks[0])
 
   const [selected, setSelected] = useState("");
   
@@ -32,6 +35,11 @@ const Header = (props) => {
     e.preventDefault();
     const {value} = e.target;
     console.log("Search ", value )
+  }
+
+  const handleActiveCategory = (cat, idx) => {
+    setActiveCategoryIndex(idx);
+    setActiveCategory(cat);
   }
 
   const handleCartClick = (e) => {
@@ -56,7 +64,7 @@ const Header = (props) => {
     <>
     <header>
       <div className="hedtop_mainbar">
-        <a href="#">ENJOY UP TO 70% OFF. USE CODE NEWNESS</a>
+        <Link className='text-white' to="/">ENJOY UP TO 70% OFF. USE CODE NEWNESS</Link>
       </div>
       <div className="headerdata_one">
         <div className="container">
@@ -67,21 +75,21 @@ const Header = (props) => {
             />
           </div>
           <div className="midlogodata">
-            <a href="javascript:void(0);" onClick={(e) => {handleLogoClick(e)}}>
+            <Link to="/" onClick={(e) => {handleLogoClick(e)}}>
               <Logo />
-            </a>
+            </Link>
           </div>
           <div className="rightuercartdata">
             <div className="rightuercart_iner">
               <div className="hed_userbtntop">
-                <a href="javascript:void(0);" onClick={(e) => {handleUserIconClick(e)}}>
+                <Link to="/" onClick={(e) => {handleUserIconClick(e)}}>
                   <UserIcon />
-                </a>
+                </Link>
               </div>
               <div className="hed_wishlistbtntop">
-                <a href="javascript:void(0);">
+                <Link to="/">
                   <WishlistIcon />
-                </a>
+                </Link>
               </div>
               <div className="hed_cartbtntop">
                 <div className="iSelect fixedWidth rounded">
@@ -103,10 +111,10 @@ const Header = (props) => {
                                 <img src={product?.image} alt="Product" />
                               </div>
                               <div className="maindicrtdati-right">
-                                <a href="javascript:void(0);">{product?.title}</a>
+                                <Link to="/">{product?.title}</Link>
                                 <h6>{product?.quantity} X ${product?.price}</h6>
                               </div>
-                              <a href="javascript:void(0);" className="cartdorp-remove"><i className='bx bx-x'></i></a>
+                              <Link to="/" className="cartdorp-remove"><i className='bx bx-x'></i></Link>
                             </div>
                           })
                           }
@@ -117,9 +125,9 @@ const Header = (props) => {
                           </div>
 
                           <div className="togcart-myvcartalbtn">
-                            <a href="javascript:void(0);" onClick={(e) => handleCartClick(e)} className="tog-viewcartbtn">View My Cart</a>
-                            <a href="javascript:void(0);" onClick={(e) => handleCheckoutClick(e)} className="tog-gotodesh">Go To checkout</a>
-                            <a href="javascript:void(0);" onClick={(e) => handleClearCartClick(e)} className="tog-clearcart">Clear Cart</a>
+                            <Link to="/" onClick={(e) => handleCartClick(e)} className="tog-viewcartbtn">View My Cart</Link>
+                            <Link to="/" onClick={(e) => handleCheckoutClick(e)} className="tog-gotodesh">Go To checkout</Link>
+                            <Link to="/" onClick={(e) => handleClearCartClick(e)} className="tog-clearcart">Clear Cart</Link>
                           </div>
                         </div>
                       </div>
@@ -143,30 +151,19 @@ const Header = (props) => {
                   </div> --> */}
                   <div className="collapse navbar-collapse right-hednavmaincov" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li className="nav-item dropdown actmenudaminbtn">
-                        <a className="nav-link dropdown-toggle d-menu" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Women <svg className="navarrowbtnmenu" id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    { categoryLinks.map((category, index) => {
+                      let listClasses = 'nav-item dropdown';
+                      if (index === activeCategoryIndex) {
+                        listClasses += ' actmenudaminbtn';
+                      }
+                      return <li className={listClasses} onClick={() => handleActiveCategory(category, index)}>
+                        <Link className="nav-link dropdown-toggle d-menu" to={category.to} id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          {category.name} <svg className="navarrowbtnmenu" id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
-                        </a>
+                        </Link>
                       </li>
-                      <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle d-menu" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Men <svg className="navarrowbtnmenu" id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </a>
-                      </li>
-                      <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle d-menu" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Kids <svg className="navarrowbtnmenu" id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="#">Electronics</a>
-                      </li>
+                    })}
                     </ul>
                   </div>
                 </div>
@@ -185,9 +182,9 @@ const Header = (props) => {
         <div className="container">
           <div className="mobile_headercov">
             <div className="mobile_headerleft">
-              <a href="javascript:void(0);">
+              <Link to="/">
                 <img src="images/logo.png" alt="" />
-              </a>
+              </Link>
             </div>
             <div className="mobile_headeright">
               <div className="hedlengdata mobile_setbox">
@@ -200,14 +197,14 @@ const Header = (props) => {
               </div>
               
               <div className="mobile_heduser1">
-                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#signup_mobile">
+                <Link to="/" data-bs-toggle="modal" data-bs-target="#signup_mobile">
                   <img src="svg/user-icon-hed.svg" alt="" />
-                </a>
+                </Link>
               </div>
               <div className="mobile_hedusearch">
-                {/* <!-- <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#signin">
+                {/* <!-- <Link to="/" data-bs-toggle="modal" data-bs-target="#signin">
                   <img src="svg/search-icon-hed.svg" alt="" >
-                </a> --> */}
+                </Link> --> */}
                 <div id="wrap">
                   <form action="" autoComplete="on">
                     <input id="search" name="search" type="text" placeholder="Search Here" />
@@ -222,71 +219,72 @@ const Header = (props) => {
           <div className="container">
             <ul> 
               <li className="active">
-                <a href="javascript:void(0);">Women</a>
+                <Link to="/category/women">Women</Link>
               </li>
               <li>
-                <a href="javascript:void(0);">Men</a>
+                <Link to="/category/men">Men</Link>
               </li>
               <li>
-                <a href="javascript:void(0);">Kids</a>
+                <Link to="/category/kids">Kids</Link>
               </li>
               <li>
-                <a href="javascript:void(0);">Electronics</a>
+                <Link to="/category/electronics">Electronics</Link>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      
-      <div className="hedsubmenu_listcov">
-        <div className="container">
-          <ul>
-            <li>
-              <a href="javascript:void(0);">Brand</a>
-            </li>
-            <li><a href="javascript:void(0);">Accessories</a></li>
-            <li><a href="javascript:void(0);">Sports</a></li>
-            <li><a href="javascript:void(0);">Bags</a></li>
-            <li><a href="javascript:void(0);" className="browse item">Shoes</a></li>
-            <li className="mega-dropdown menusumegamin_cov">
-              <a href="javascript:void(0);" className="browse item">New Arivals</a>
-              <div className="megamenu">
-                <div className="mainmegamenusetcov">
-                  <div className="mainmegamenuset_navlist rightbordermegasub">
-                    <h5>SHOP BY PRODUCT</h5>
-                    <a href="">Shoes</a>
-                    <a href="">Accessories</a>
-                    <a href="">Bags</a>
-                    <a href="">Beauty</a>
-                    <a href="">Home & gifting</a>
-                    <a href="">sports</a>
-                    <a href="">Boutique</a>
-                    <a href="">Streetwear</a>
-                    <a href="">Modest</a>
-                  </div>
-                  <div className="mainmegamenuset_navlist">
-                    <h5>SHOP BY New in</h5>
-                    <a href="">Dresses</a>
-                    <a href="">TOpS</a>
-                    <a href="">T-shirts & vests</a>
-                    <a href="">Arabian clothing</a>
-                    <a href="">Pants & leggings</a>
-                    <a href="">Abayas</a>
-                    <a href="">Jumpsuits & Playsuits</a>
-                    <a href="">Hoodies & sweatshirts</a>
-                    <a href="">Skirts</a>
-                    <a href="">Jackets & coats</a>
-                  </div>
-                  <div className="mainmegamenuset_imgdata">
-                    <img src="images/mega-menu-img.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li><a href="javascript:void(0);">Clothing</a></li>
-          </ul>
+      {activeCategory && activeCategory.haveSubCategory && 
+        <div className="hedsubmenu_listcov">
+          <div className="container">
+            <ul>
+              { activeCategory.subCategories.map((subCat, scIdx) => {
+                return <>
+                  { subCat.haveMegaMenu ? 
+                    <li className="mega-dropdown menusumegamin_cov">
+                      <Link to={subCat.to} className="browse item">{subCat.name}</Link>
+                      <div className="megamenu">
+                        <div className="mainmegamenusetcov">
+                          <div className="mainmegamenuset_navlist rightbordermegasub">
+                            <h5>SHOP BY PRODUCT</h5>
+                            <Link to="/">Shoes</Link>
+                            <Link to="/">Accessories</Link>
+                            <Link to="/">Bags</Link>
+                            <Link to="/">Beauty</Link>
+                            <Link to="/">Home & gifting</Link>
+                            <Link to="/">sports</Link>
+                            <Link to="/">Boutique</Link>
+                            <Link to="/">Streetwear</Link>
+                            <Link to="/">Modest</Link>
+                          </div>
+                          <div className="mainmegamenuset_navlist">
+                            <h5>SHOP BY New in</h5>
+                            <Link to="/">Dresses</Link>
+                            <Link to="/">TOpS</Link>
+                            <Link to="/">T-shirts & vests</Link>
+                            <Link to="/">Arabian clothing</Link>
+                            <Link to="/">Pants & leggings</Link>
+                            <Link to="/">Abayas</Link>
+                            <Link to="/">Jumpsuits & Playsuits</Link>
+                            <Link to="/">Hoodies & sweatshirts</Link>
+                            <Link to="/">Skirts</Link>
+                            <Link to="/">Jackets & coats</Link>
+                          </div>
+                          <div className="mainmegamenuset_imgdata">
+                            <img src={megaImage} alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                      :
+                    <li><Link to={subCat.to}>{subCat.name}</Link></li> 
+                  }
+                </>
+              })}
+            </ul>
+          </div>
         </div>
-      </div>
+      }
     </header>
     {location.pathname !== '/' && <Breadcrumbs /> }
     <SignInModal />

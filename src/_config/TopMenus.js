@@ -1,6 +1,8 @@
-import CheckoutPage from "../layouts/Checkout";
-import Home from "../layouts/home";
-import ShopPage from "../layouts/Shop";
+import CategoryPage from "../layouts/CategoryPage";
+import CheckoutPage from "../layouts/CheckoutPage";
+import HomePage from "../layouts/HomePage";
+import PageNotFound from "../layouts/PageNotFound";
+import ShopPage from "../layouts/ShopPage";
 
 // Top Menu Paths
 export const TopMenusRoutes = [
@@ -25,9 +27,23 @@ export const TopMenusRoutes = [
     element: <ShopPage />
   },
   {
+    path: "/category/:category/:subcategory",
+    exact: true,
+    element: <CategoryPage />
+  },
+  {
+    path: "/category/:category/",
+    exact: true,
+    element: <CategoryPage />
+  },
+  {
     path: "/",
     exact: true,
-    element: <Home />
+    element: <HomePage />
+  },
+  {
+    path: "*",
+    element: <PageNotFound />
   },
 ]
 

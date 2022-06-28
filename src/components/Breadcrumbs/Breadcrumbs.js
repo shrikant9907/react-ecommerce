@@ -1,15 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { NextIcon } from '../../_assets/icons/Icons';
 
 const Breadcrumbs = (props) => {
-
-  let navigate = useNavigate(); 
-
-  const navigateToHome = (e) =>{ 
-    e.preventDefault();
-    navigate('/');
-  }
 
   return (
     <>
@@ -17,7 +10,7 @@ const Breadcrumbs = (props) => {
         <div className="container">
           <ul>
             <li>
-              <a onClick={(e) => navigateToHome(e)} href="javascript:void(0);">Home</a>
+              <Link to="/">Home</Link>
               <NextIcon />
             </li>
             <li>

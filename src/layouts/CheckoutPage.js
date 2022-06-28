@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from "react-router-dom"
-import ProductImage from '../../_assets/images/product-img.png';
+import { Link, useLocation } from "react-router-dom"
+import ProductImage from '../_assets/images/product-img.png';
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from 'react-redux';
-import { addQuantity, removeFromCart, subtractQuantity } from '../../_actions/cartActions';
+import { addQuantity, removeFromCart, subtractQuantity } from '../_actions/cartActions';
 
 const CheckoutPage = (props) => {
 
@@ -149,7 +149,7 @@ const CheckoutPage = (props) => {
 														<h6>Apply Discount Code</h6>
 														<div className="applydiscot-form">
 															<input type="text" placeholder="Enter discount code" />
-															<a href="javascript:void(0);">Apply</a>
+															<Link to="/">Apply</Link>
 														</div>
 													</div>
 												</div>
@@ -184,7 +184,7 @@ const CheckoutPage = (props) => {
 																			</div>
 																		</td>
 																		<td className="catprod-remove">
-																			<a onClick={(e) => handleRemoveCartItem(e, product.id)} href="javascript:void(0);">Remove<i class='bx bx-x'></i></a>
+																			<Link onClick={(e) => handleRemoveCartItem(e, product.id)} to="/">Remove<i class='bx bx-x'></i></Link>
 																		</td>
 																	</tr>
 															})}
@@ -197,7 +197,7 @@ const CheckoutPage = (props) => {
 										<br />
 										<input type="button" name="next" onClick={(e) => handleCheckoutContinue(e)} className="next action-button nxtprvbtnsetmaincov1" value="Continue to Checkout" />
 										<div className="cotcoshop-albtncart">
-											<a onClick={(e) => handleContinueShopping(e)} href="javascript:void(0);">Continue Shopping</a>
+											<Link onClick={(e) => handleContinueShopping(e)} to="/">Continue Shopping</Link>
 										</div>
 									</fieldset>
 								}
@@ -223,7 +223,7 @@ const CheckoutPage = (props) => {
 															</div>
 														</div>
 														<div className="seemorbtnlinkcovcrt">
-															<a href="#">See More</a>
+															<Link href="#">See More</Link>
 														</div>
 													</div>
 													<div className="orderSumma-main1">
@@ -265,7 +265,7 @@ const CheckoutPage = (props) => {
 														<h6>Apply Discount Code</h6>
 														<div className="applydiscot-form">
 															<input type="text" placeholder="Enter discount code" />
-															<a href="javascript:void(0);">Apply</a>
+															<Link to="/">Apply</Link>
 														</div>
 													</div>
 												</div>
@@ -275,7 +275,7 @@ const CheckoutPage = (props) => {
 													<h2>Shipping Address</h2>
 												</div>
 												<div className="shipaddress-maincov" >
-													<h6><a href="javascript:void(0);">Already have an account? Log in</a></h6>
+													<h6><Link to="/">Already have an account? Log in</Link></h6>
 													<div className="shipaddressformset">
 														<div className="row">
 															<div className="col-md-6">
@@ -445,7 +445,7 @@ const CheckoutPage = (props) => {
 										{/* <!-- <input type="button" name="previous" className="previous action-button-previous" value="Previous" /> --> */}
 
 										<div className="cotcoshop-albtncart">
-											<a onClick={(e) => handleReturnToCart(e)} href="javascript:void(0);">Return to cart</a>
+											<Link onClick={(e) => handleReturnToCart(e)} to="/">Return to cart</Link>
 										</div>
 									</fieldset>
 								}
@@ -471,7 +471,7 @@ const CheckoutPage = (props) => {
 															</div>
 														</div>
 														<div className="seemorbtnlinkcovcrt">
-															<a href="#">See More</a>
+															<Link href="#">See More</Link>
 														</div>
 													</div>
 													<div className="orderSumma-main1">
@@ -513,7 +513,7 @@ const CheckoutPage = (props) => {
 														<h6>Apply Discount Code</h6>
 														<div className="applydiscot-form">
 															<input type="text" placeholder="Enter discount code" />
-															<a href="javascript:void(0);">Apply</a>
+															<Link to="/">Apply</Link>
 														</div>
 													</div>
 												</div>
@@ -616,7 +616,7 @@ const CheckoutPage = (props) => {
 										{/* <!-- <input type="button" name="next" className="next action-button nxtprvbtnsetmaincov1" value="Pay Now" /> --> */}
 										<div className="cotcoshop-albtncart">
 											<button onClick={() => handlePaynow()} >Pay Now</button>
-											<a onClick={(e) => handleReturnToShipping(e)} href="javascript:void(0);">Return to shipping</a>
+											<Link onClick={(e) => handleReturnToShipping(e)} to="/">Return to shipping</Link>
 										</div>
 										{/* <!-- <input type="button" name="previous" className="previous action-button-previous" value="Previous" /> --> */}
 									</fieldset>
