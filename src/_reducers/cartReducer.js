@@ -20,11 +20,7 @@ const cartReducer = (state = initialState, action) => {
     case REMOVE_FROM_CART:
       return {
         ...state,
-        products: state.products.map(product =>
-          product.id === action.id
-            ? { ...product, selected: false, quantity: 1 }
-            : product,
-        ),
+        products:  state.products.filter(product => product.id !== action.id),
       };
     case ADD_QUANTITY:
       return {
@@ -50,11 +46,7 @@ const cartReducer = (state = initialState, action) => {
     case EMPTY_CART:
       return {
         ...state,
-        products: state.products.map(product =>
-          product.selected
-            ? { ...product, selected: false, quantity: 1 }
-            : product,
-        ),
+        products: [],
       };
     default:
       return state;

@@ -12,6 +12,7 @@ import { showSignInModal } from '../../_actions/authModalActions';
 import { useLocation } from "react-router-dom"
 import ProductImage from "../../_assets/images/product-img.png";
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
+import { emptyCart } from '../../_actions/cartActions';
   
 const Header = (props) => {
 
@@ -44,8 +45,7 @@ const Header = (props) => {
 
   const handleClearCartClick = (e) => {
     e.preventDefault();
-    // Write Clear logic here
-    toast.success('Cart cleared successfully.')
+    dispatch(emptyCart());
   }
 
   const handleUserIconClick = () => {

@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom"
 import ProductImage from '../../_assets/images/product-img.png';
 import { toast } from "react-toastify";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addQuantity, removeFromCart, subtractQuantity } from '../../_actions/cartActions';
 
 const CheckoutPage = (props) => {
-	const location = useLocation()
 
+	const dispatch = useDispatch();
+	const location = useLocation()
 	const cartData = useSelector(state => state.cart.products);
 	
 	const [checkoutStep, setCheckoutStep] = useState(1);
@@ -59,17 +61,17 @@ const CheckoutPage = (props) => {
 
 	const handleRemoveCartItem = (e, pid) => {
 		e.preventDefault();
-		toast.success("Remove Product ID: " + pid + " Clicked");
+		dispatch(removeFromCart(pid));
 	}
 
 	const incrementProductQty = (e, pid) => {
 		e.preventDefault();
-		toast.success("Plus Qty " + pid + " Clicked");
+		dispatch(addQuantity(pid));
 	}
 
 	const decrementProductQty = (e, pid) => {
 		e.preventDefault();
-		toast.success("Minus Qty " + pid + " Clicked");
+		dispatch(subtractQuantity(pid));
 	}
 	
 	return (
@@ -182,7 +184,7 @@ const CheckoutPage = (props) => {
 																			</div>
 																		</td>
 																		<td className="catprod-remove">
-																			<a onClick={(e) => handleRemoveCartItem(e, product.id)} href="javascript:void(0);"><i class='bx bx-x'></i></a>
+																			<a onClick={(e) => handleRemoveCartItem(e, product.id)} href="javascript:void(0);">Remove<i class='bx bx-x'></i></a>
 																		</td>
 																	</tr>
 															})}

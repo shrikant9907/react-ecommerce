@@ -1,7 +1,7 @@
 {
   "name": "react_starter",
-  "homepage": "https://shrikant9907.github.io",
-  "version": "0.1.0",
+  "homepage": "https://shrikant9907.github.io/react-ecommerce",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
