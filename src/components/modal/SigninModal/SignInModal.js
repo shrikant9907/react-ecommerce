@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from "react-redux";
 import { hideSignInModal, showSignInModal, showSignUpModal } from "../../../_actions/authModalActions";
 import { Link } from "react-router-dom";
+import { GoogleLogin } from "react-google-login";
 
 const SignInModal = (props) => {
 
@@ -31,6 +32,10 @@ const SignInModal = (props) => {
     }
   }
 
+  const responseGoogle = response => {
+    console.log(response);
+  };
+
   return <>
     {authModal.showSigninModal && <div className="modal-backdrop fade show" onClick={() => closeModal()}></div>}
     {authModal.showSigninModal &&
@@ -48,13 +53,13 @@ const SignInModal = (props) => {
                   <div className="comsignupinsetcov">
                     <div className="comsignupinset-inerform">
                       <div className="form-group">
-                        <label for="">Email</label>
+                        <label htmlFor="">Email</label>
                         <input type="text" className="form-control" id="" placeholder="Enter Email address" />
                       </div>
                     </div>
                     <div className="comsignupinset-inerform">
                       <div className="form-group">
-                        <label for="">Password</label>
+                        <label htmlFor="">Password</label>
                         <input type="text" className="form-control" id="" placeholder="Enter Email address" />
                       </div>
                     </div>
@@ -72,6 +77,21 @@ const SignInModal = (props) => {
                       <Link to="/">
                         <img src={GoogleLoginSrc} alt="Login with Google" />
                       </Link>
+                      <GoogleLogin
+                        buttonText="Login"
+                        onSuccess={responseGoogle}
+                        onFailure={responseGoogle}
+                      />
+                      {/* <GoogleLogin
+                        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+                        render={renderProps => (
+                          <button onClick={renderProps.onClick} disabled={renderProps.disabled}>This is my custom Google button</button>
+                        )}
+                        buttonText="Login"
+                        onSuccess={responseGoogle}
+                        onFailure={responseGoogle}
+                        cookiePolicy={'single_host_origin'}
+                      /> */}
                     </div>
                     <div className="newcretaccot-link">
                       <Link to="/" onClick={(e) => handleCreateNewAccount(e)} >Create New Account?</Link>

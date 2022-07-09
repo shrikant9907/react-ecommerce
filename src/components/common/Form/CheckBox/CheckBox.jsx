@@ -12,7 +12,7 @@ const Checkbox = ({ label, id, className, name, value, onChange, defaultValue, d
 
   return (
     <div className={classes}>
-      <label className="css-control css-checkbox" htmlFor={id}>
+      <label className="css-control css-checkbox" htmlhtmlFor={id}>
         { inputChecked ? 
           <input
             disabled = {disabled}

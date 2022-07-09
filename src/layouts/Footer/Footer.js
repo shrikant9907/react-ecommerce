@@ -193,31 +193,31 @@ const Footer = (props) => {
         <ul>
           <li className="active">
             <Link to="/">
-              <i class='bx bx-home'></i>
+              <i className='bx bx-home'></i>
               <span>Home</span>
             </Link>
           </li>
           <li>
             <Link to="/gift">
-              <i class='bx bx-gift'></i>
+              <i className='bx bx-gift'></i>
               <span>Gift</span>
             </Link>
           </li>
           <li>
             <Link to="/category">
-              <i class='bx bx-category'></i>
+              <i className='bx bx-category'></i>
               <span>Category</span>
             </Link>
           </li>
           <li>
             <Link to="/wishlist">
-              <i class='bx bx-heart'></i>
+              <i className='bx bx-heart'></i>
               <span>Wishlist</span>
             </Link>
           </li>
           <li>
             <Link to="/cart">
-              <i class='bx bx-cart'></i>
+              <i className='bx bx-cart'></i>
               <span>Cart</span>
             </Link>
           </li>

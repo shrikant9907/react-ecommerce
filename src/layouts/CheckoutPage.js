@@ -184,7 +184,7 @@ const CheckoutPage = (props) => {
 																			</div>
 																		</td>
 																		<td className="catprod-remove">
-																			<Link onClick={(e) => handleRemoveCartItem(e, product.id)} to="/">Remove<i class='bx bx-x'></i></Link>
+																			<Link onClick={(e) => handleRemoveCartItem(e, product.id)} to="/">Remove<i className='bx bx-x'></i></Link>
 																		</td>
 																	</tr>
 															})}
@@ -318,7 +318,7 @@ const CheckoutPage = (props) => {
 															<div className="col-md-4">
 																<div className="comsignupinset-inerform">
 																	<div className="form-group locationaddership">
-																		<i class='bx bxs-map'></i>
+																		<i className='bx bxs-map'></i>
 																		<input type="text" className="form-control" id="" placeholder="Find Location" />
 																	</div>
 																</div>
@@ -539,7 +539,7 @@ const CheckoutPage = (props) => {
 																			<div className="form-group">
 																				<input type="text" className="form-control" id="" placeholder="Card Number" />
 																				{/* style="padding-right: 40px;" */}
-																				<i class='bx bxs-lock'></i>
+																				<i className='bx bxs-lock'></i>
 																			</div>
 																			<div className="form-group">
 																				<input type="text" className="form-control" id="" placeholder="Name Of Card" />
@@ -575,7 +575,7 @@ const CheckoutPage = (props) => {
 												</div> --> */}
 														</div>
 														<div className="plans">
-															<label className="plan basic-plan" for="basic">
+															<label className="plan basic-plan" htmlFor="basic">
 																<input type="radio" name="plan" id="basic" />
 																<div className="plan-content">
 																	<div className="plan-details">
@@ -583,7 +583,7 @@ const CheckoutPage = (props) => {
 																	</div>
 																</div>
 															</label>
-															<label className="plan complete-plan" for="complete">
+															<label className="plan complete-plan" htmlFor="complete">
 																<input type="radio" id="complete" name="plan" />
 																<div className="plan-content">
 																	<div className="plan-details">

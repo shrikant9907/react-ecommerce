@@ -11,7 +11,7 @@ const SelectField = (props) => {
     <React.Fragment>
       <div className={className}>
         {props.label &&
-          <label htmlFor={props.id}>
+          <label htmlhtmlFor={props.id}>
             {props.label}
             {props.required && <span className="text-danger"> *</span>}
           </label>

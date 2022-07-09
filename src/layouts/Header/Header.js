@@ -93,7 +93,7 @@ const Header = (props) => {
               </div>
               <div className="hed_cartbtntop">
                 <div className="iSelect fixedWidth rounded">
-                  <label for="chk">
+                  <label htmlFor="chk">
                     <input aria-hidden="true" id="chk" type="checkbox" />
                     <span className="select-label active" title="Select the model">
                       <CartIcon />
@@ -106,7 +106,7 @@ const Header = (props) => {
                         <div className="maindicrtdati-inr">
                         
                           {cartData.map((product, pidx) => {
-                            return <div className="maindicrtdati-prodlst">
+                            return <div key={pidx} className="maindicrtdati-prodlst">
                               <div className="maindicrtdati-left">
                                 <img src={product?.image} alt="Product" />
                               </div>
@@ -156,9 +156,9 @@ const Header = (props) => {
                       if (index === activeCategoryIndex) {
                         listClasses += ' actmenudaminbtn';
                       }
-                      return <li className={listClasses} onClick={() => handleActiveCategory(category, index)}>
+                      return <li key={index} className={listClasses} onClick={() => handleActiveCategory(category, index)}>
                         <Link className="nav-link dropdown-toggle d-menu" to={category.to} id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          {category.name} <svg className="navarrowbtnmenu" id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          {category.name} <svg className="navarrowbtnmenu" id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                         </Link>
@@ -191,7 +191,7 @@ const Header = (props) => {
                 <form>
                   <div className="form-item">
                     <input id="country_selector2" type="text" />
-                    <label for="country_selector" className='d-none'>Select a country here...</label>
+                    <label htmlFor="country_selector" className='d-none'>Select a country here...</label>
                   </div>
                 </form>
               </div>

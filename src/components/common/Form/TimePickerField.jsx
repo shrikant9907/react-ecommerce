@@ -72,7 +72,7 @@ const TimePickerField = ({
     <React.Fragment>
       <div className={className ? className : "w-100 custom-time-picker"}>
         {label && label !== "" && (
-          <label htmlFor={id}>
+          <label htmlhtmlFor={id}>
             {label}
             {required && <span className="text-danger"> *</span>}
           </label>

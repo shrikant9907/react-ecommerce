@@ -36,7 +36,7 @@ const SignUpModal = (props) => {
                     <div className="col-md-6">
                       <div className="comsignupinset-inerform">
                         <div className="form-group">
-                          <label for="">First Name</label>
+                          <label htmlFor="">First Name</label>
                           <input type="text" className="form-control" id="" placeholder="Enter First name" />
                         </div>
                       </div>
@@ -44,7 +44,7 @@ const SignUpModal = (props) => {
                     <div className="col-md-6">
                       <div className="comsignupinset-inerform">
                         <div className="form-group">
-                          <label for="">Last Name</label>
+                          <label htmlFor="">Last Name</label>
                           <input type="text" className="form-control" id="" placeholder="Enter Last name" />
                         </div>
                       </div>
@@ -52,7 +52,7 @@ const SignUpModal = (props) => {
                   </div>
                   <div className="comsignupinset-inerform">
                     <div className="form-group">
-                      <label for="">Email</label>
+                      <label htmlFor="">Email</label>
                       <input type="text" className="form-control" id="" placeholder="Enter Email Address" />
                     </div>
                   </div>
@@ -70,7 +70,7 @@ const SignUpModal = (props) => {
                     <div className="col-md-6">
                       <div className="comsignupinset-inerform">
                         <div className="form-group formdatamiancov">
-                          <label for="">Date of birth</label>
+                          <label htmlFor="">Date of birth</label>
                           <div id="datepicker" className="input-group date" data-date-format="dd-mm-yyyy">
                             <input className="form-control" type="text" placeholder="Select Date" readonly />
                             <span className="input-group-addon"><i className='bx bx-calendar'></i></span>
@@ -81,7 +81,7 @@ const SignUpModal = (props) => {
                     <div className="col-md-6">
                       <div className="comsignupinset-inerform">
                         <div className="form-group">
-                          <label for="">Gender</label>
+                          <label htmlFor="">Gender</label>
                           <select className="js-example-basic-single form-control" name="gender">
                             <option value="">Male</option>
                             <option value="">Female</option>
@@ -92,7 +92,7 @@ const SignUpModal = (props) => {
                   </div>
                   <div className="comsignupinset-inerform">
                     <div className="form-group">
-                      <label for="">Mobile No</label>
+                      <label htmlFor="">Mobile No</label>
                       <div className="sltmobileaninput">
                         <input type="text" className="form-control" id="" placeholder="Enter Mobile No" />
                         <select className="js-example-basic-single" name="gender">
@@ -106,13 +106,13 @@ const SignUpModal = (props) => {
                   </div>
                   <div className="comsignupinset-inerform">
                     <div className="form-group">
-                      <label for="">OTP</label>
+                      <label htmlFor="">OTP</label>
                       <input type="password" className="form-control" id="" placeholder="Enter OTP" />
                     </div>
                   </div>
                   <div className="comsignupinset-inerform">
                     <div className="form-group">
-                      <label for="">Password</label>
+                      <label htmlFor="">Password</label>
                       <input type="password" className="form-control" id="" placeholder="Enter Password" />
                     </div>
                   </div>

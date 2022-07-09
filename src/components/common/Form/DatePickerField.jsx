@@ -26,7 +26,7 @@ const DatePickerField = (props) => {
   return (
     <div className={props.classes ? props.classes : "mb-3"}>
 
-      { props.label && (<label htmlFor={props.label}>{props.label}
+      { props.label && (<label htmlhtmlFor={props.label}>{props.label}
       {
         props.required && <span className="text-danger"> *</span>
       }

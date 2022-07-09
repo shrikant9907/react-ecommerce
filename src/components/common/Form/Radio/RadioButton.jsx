@@ -12,7 +12,7 @@ const RadioButton = ({ label, id, className, name, value, onChange, defaultValue
 
   return (
     <div className={classes}>
-      <label className="css-control css-radio" htmlFor={id}>
+      <label className="css-control css-radio" htmlhtmlFor={id}>
         { inputChecked ? 
           <input
             disabled = {disabled}

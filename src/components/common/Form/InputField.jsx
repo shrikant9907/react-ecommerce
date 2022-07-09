@@ -25,7 +25,7 @@ const InputField = ({
     <React.Fragment>
       <div className={className ? className : "w-100 mb-3"}>
         {label && (
-          <label htmlFor={id}>
+          <label htmlhtmlFor={id}>
             {label}
             {required && <span className="text-danger"> *</span>}
           </label>
